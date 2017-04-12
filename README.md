@@ -48,6 +48,6 @@ MSVC does not have full C99 support. Restrict **COMMIT**.
  Added instead a zero-length array, which should
  have the same effect. (59f186f0e50ce2caeca24aa9b1ca20f744e3810c)
 - `__func__` does not exist in MSVC, but `__FUNCTION__` does.
-  (95e19fa5fd680f3521acf65131ff51f71b6f1b01)
+  ( 95e19fa5fd680f3521acf65131ff51f71b6f1b01 )
     
 
