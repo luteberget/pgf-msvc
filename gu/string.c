@@ -5,7 +5,7 @@
 #include <gu/utf8.h>
 #include <gu/assert.h>
 #include <stdlib.h>
-#ifdef __MINGW32__
+#if defined(__MINGW32__) || defined(_MSC_VER)
 #include <malloc.h>
 #endif
 
