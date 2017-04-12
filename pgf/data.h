@@ -56,7 +56,8 @@ typedef struct {
 	PgfPatt patt;
 } PgfPattAs;
 
-typedef void PgfPattWild;
+// Dummy type. Using char to be able to do pointer arithmetic.
+typedef char PgfPattWild;
 
 typedef struct {
 	PgfPatt patt;
