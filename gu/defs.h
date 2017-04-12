@@ -25,6 +25,11 @@
 #ifndef GU_DEFS_H_
 #define GU_DEFS_H_
 
+// MSVC uses __FUNCTION__ instead of __func__
+#if defined(_MSC_VER)
+#define __func__ __FUNCTION__
+#endif
+
 #include <stddef.h>
 #include <inttypes.h>
 #include <stdbool.h>
