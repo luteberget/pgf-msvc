@@ -21,16 +21,14 @@ There is a problem with debug builds where a DLL file `ucrtbased.dll` is not cop
 directory. This can be fixed by locating the file and copying it. Release builds seem to be working.
 
 ## DLL Exports
-    Building Windows DLLs on MSVC requires explicitly exporting symbols.
-    CMake takes care of exporting functions, but for data
-    (constants/variables) we need to add __declspec(dllexport) and similar.
-
+Building Windows DLLs on MSVC requires explicitly exporting symbols.
+CMake takes care of exporting functions, but for data
+(constants/variables) we need to add `__declspec(dllexport)` and similar.
 Have added `GU_API_DATA_DECL` (6b1128d96b075cc7b7e14f9e1624443cef5cec34)
 and `PGF_API_DATA_DECL` (7abc1b4894753d514dd5bd1d51f9dd31f77f340c).
 
 ## MSVC C99 support
-MSVC does not have full C99 support. Restrict **COMMIT**.
-    
+  
  -  MSVC does not support the C99 keyword `restrict`.
   Added a macro which renamed to `__restricted`, which
   has the same meaning in MSVC. (62e9af346a688e5da4370063d546937216c152c4)
