@@ -30,6 +30,11 @@
 #define __func__ __FUNCTION__
 #endif
 
+// MSVC uses __restrict instead of restrict
+#if defined(_MSC_VER)
+#define restrict __restrict
+#endif
+
 #include <stddef.h>
 #include <inttypes.h>
 #include <stdbool.h>
